@@ -1,37 +1,39 @@
 # Example-Vue-Dashboard
 
-Dieses Beispielprojekt demonstriert den Aufbau eines schlanken Single-Page Dashboards unter Verwendung des Vue.js Frameworks. Es illustriert, wie einzelne Widgets Daten dynamisch via REST oder Websockets geladen werden können. Für das grundlegende Design wird Bootstrap verwendet, welches eine schnelle und responsive Gestaltung ermöglicht.
+This example project demonstrates how to build a lean single-page dashboard using the Vue.js framework. It illustrates how individual widgets can dynamically load data via REST or Websockets. For the basic design, Bootstrap is used, which enables fast and responsive layouts.
 
-### VueCLI installieren
+### Install VueCLI
 
-Um dieses Beispiel zu nutzen, vergewissern Sie sich zunächst, dass VueCLI auf Ihrem System installiert ist. Installieren Sie VueCLI global, indem Sie den folgenden Befehl in einem Terminal ausführen:
+To use this example, first make sure VueCLI is installed on your system. Install VueCLI globally by running the following command in a terminal:
 
-```bash
+```
 npm install -g @vue/cli
 ```
 
-# Projekteinrichtung
+# Project Setup
 
-Nach der Installation von VueCLI können Sie das Projekt einrichten. Öffnen Sie ein Terminal im Projektverzeichnis und führen Sie den folgenden Befehl aus, um die notwendigen Abhängigkeiten zu installieren:
+After installing VueCLI, you can set up the project. Open a terminal in the project directory and run the following command to install the necessary dependencies:
 
-```bash
+```
 npm install
 ```
 
-# Kompilieren und Hot-Reload für die Entwicklung
+# Compile and Hot-Reload for Development
 
-Um das Dashboard im Entwicklungsmodus mit Hot-Reload zu starten, verwenden Sie:
+To start the dashboard in development mode with hot-reload, use:
 
-```bash
+```
 npm run serve
 ```
 
-Dies startet einen lokalen Server, auf dem Sie das Dashboard im Browser unter http://localhost:8080 betrachten können. Änderungen am Code werden automatisch übernommen und sofort im Browser angezeigt.
+This will start a local server where you can view the dashboard in your browser at http://localhost:8080. Changes to the code are automatically applied and immediately visible in the browser.
 
-# Kompilieren und Minifizieren für die Produktion
+# Compile and Minify for Production
 
-Wenn Sie das Dashboard für den Einsatz in einer Produktionsumgebung vorbereiten möchten, nutzen Sie:
+To prepare the dashboard for deployment in a production environment, use:
 
-```bash
+```
 npm run build
 ```
+
+Note that you may need to adjust the `publicPath` in `vue.config.js` depending on your environment. The current adjustment is made to display the app from a subfolder of the repository for demonstration purposes.
