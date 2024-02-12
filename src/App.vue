@@ -2,11 +2,13 @@
   <!-- Header -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list" id="toggle-sidebar-btn"></i>
       <router-link to="/" class="logo d-flex align-items-center">
-        <img src="logo/logo.png" alt="Logo">
         <span>Vue Dashboard</span>
       </router-link>
+   
     </div>
+
   </header>
 
   <!-- Sidebar -->
@@ -83,6 +85,11 @@ export default {
   mounted()
   {
     window.addEventListener('scroll', this.handleScroll);
+    
+    document.getElementById("toggle-sidebar-btn").addEventListener('click', function() {
+      document.body.classList.toggle('toggle-sidebar');
+    });
+
     this.handleScroll();
   },
   beforeUnmount()
@@ -126,12 +133,6 @@ Header
 .logo {
   line-height: 1;
 }
-
-.logo img {
-  max-height: 26px;
-  margin-right: 6px;
-}
-
 .logo span {
   font-size: 26px;
   font-weight: 650;
@@ -146,6 +147,13 @@ Header
   box-shadow: 0px 2px 20px rgba(5, 40, 110, 0.1);
   background-color: #fff;
   padding-left: 20px;
+}
+
+#toggle-sidebar-btn {
+	font-size: 32px;
+  margin-right: 10px;
+	cursor: pointer;
+	color: #012970;
 }
 
 /*
@@ -174,8 +182,25 @@ Sidebar
   user-select: none;         /* Standard: Chrome und andere */
 }
 
+
 @media (max-width: 1199px) {
-	.sidebar {
+	/* Sidebar auf kleinen Bildschirmen ausblenden */
+  .sidebar {
+		left: -300px;
+	}
+
+  /* Sidebar auf kleinen Bildschirmen einblenden, wenn toggle-sidebar Klasse gesetzt wurde*/
+  .toggle-sidebar .sidebar {
+		left: 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.toggle-sidebar #main {
+		margin-left: 0;
+	}
+
+	.toggle-sidebar .sidebar {
 		left: -300px;
 	}
 }
