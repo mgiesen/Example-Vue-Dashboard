@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import MyDashboard1 from '../components/dashboards/MyDashboard1.vue';
-import MyDashboard2 from '../components/dashboards/MyDashboard2.vue';
+import MyDashboard1 from '../dashboards/MyDashboard1.vue';
+import MyDashboard2 from '../dashboards/MyDashboard2.vue';
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),

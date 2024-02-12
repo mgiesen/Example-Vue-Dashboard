@@ -1,9 +1,12 @@
 // Vue Framework Import
 import { createApp } from 'vue';
 
-// Stil- und Framework-Importe
+// Framework-Importe
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// Custom CSS-Importe
+import '@/assets/style.css';
 
 // Hauptkomponenten- und Router-Importe
 import App from './App.vue';
