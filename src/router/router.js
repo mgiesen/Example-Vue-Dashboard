@@ -18,4 +18,10 @@ const router = createRouter({
     ],
 });
 
+router.afterEach(() =>
+{
+    // Schließt die Sidebar, indem die 'toggle-sidebar' Klasse entfernt wird
+    document.body.classList.remove('toggle-sidebar');
+});
+
 export default router;
